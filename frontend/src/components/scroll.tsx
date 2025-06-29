@@ -1,37 +1,33 @@
-
 const SkewedInfiniteScroll = () => {
-    const items = [
-    { id: '1', text: 'Proposal Generated' },
-    { id: '2', text: 'Email Sent' },
-    { id: '3', text: 'PDF Injested' },
-    { id: '4', text: 'Charts Prepared' },
-    { id: '5', text: 'Email Sent' },
-    { id: '6', text: 'Prompt Updated' },
+  const items = [
+    { id: "1", text: "Proposal Generated" },
+    { id: "2", text: "Email Sent" },
+    { id: "3", text: "PDF Injested" },
+    { id: "4", text: "Charts Prepared" },
+    { id: "5", text: "Email Sent" },
+    { id: "6", text: "Prompt Updated" },
     {
-    id: '7',
-    text: 'Voice Activvated',
+      id: "7",
+      text: "Voice Activvated",
     },
     {
-    id: '8',
-    text: 'Conversation stored',
+      id: "8",
+      text: "Conversation stored",
     },
-    ]
-    return (
-        
-    
+  ];
+  return (
     <div>
-        <p className="scroll-m-20 text-4xl mb-6 mx-auto text-center text-black font-extrabold tracking-tight lg:text-3xl dark:drop-shadow-[0_0_0.1rem_#15a9ed] dark:invert">
-      Streamline your process Today with Cleo!
-    </p>
-        
-    <div className="flex items-center justify-center">
-    <div className="relative w-full max-w-screen-lg overflow-hidden">
-    <div className="pointer-events-none absolute -top-1 z-10 h-20 w-full bg-gradient-to-b from-bg"></div>
-    <div className="pointer-events-none absolute -bottom-1 z-10 h-20 w-full bg-gradient-to-t from-bg"></div>
-    <div className="pointer-events-none absolute -left-1 z-10 h-full w-20 bg-gradient-to-r from-bg"></div>
-    <div className="pointer-events-none absolute -right-1 z-10 h-full w-20 bg-gradient-to-l from-bg"></div>
-    
-    
+      <p className="scroll-m-20 text-4xl mb-6 mx-auto text-center text-black font-extrabold tracking-tight lg:text-3xl dark:drop-shadow-[0_0_0.1rem_#15a9ed] dark:invert">
+        Streamline your process Today with Cleo!
+      </p>
+
+      <div className="flex items-center justify-center">
+        <div className="relative w-full max-w-screen-lg overflow-hidden">
+          <div className="pointer-events-none absolute -top-1 z-10 h-20 w-full bg-gradient-to-b from-bg"></div>
+          <div className="pointer-events-none absolute -bottom-1 z-10 h-20 w-full bg-gradient-to-t from-bg"></div>
+          <div className="pointer-events-none absolute -left-1 z-10 h-full w-20 bg-gradient-to-r from-bg"></div>
+          <div className="pointer-events-none absolute -right-1 z-10 h-full w-20 bg-gradient-to-l from-bg"></div>
+
           <div className="animate-skew-scroll mx-auto grid h-[250px] w-[300px] grid-cols-1 gap-5 sm:w-[600px] sm:grid-cols-2">
             {items.map((item) => (
               <div
@@ -60,10 +56,7 @@ const SkewedInfiniteScroll = () => {
         </div>
       </div>
     </div>
-    
-    )
-    }
-    
-    export default SkewedInfiniteScroll
-    
-    
+  );
+};
+
+export default SkewedInfiniteScroll;
