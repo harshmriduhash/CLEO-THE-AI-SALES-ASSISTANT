@@ -13,7 +13,7 @@ const Analytics = ({ className, analytics, ...props }: any) => {
     >
       <div className="flex items-center justify-between mb-10">
         <div className="flex flex-wrap">
-          {analytics?.details.map((item:any, ind:number) => (
+          {analytics?.details.map((item: any, ind: number) => (
             <div key={ind} className="p-6 hover:bg-card">
               <p className="text-sm font-medium text-secondary-foreground">
                 {item.title}
@@ -50,6 +50,5 @@ const Analytics = ({ className, analytics, ...props }: any) => {
     </div>
   );
 };
-
 
 export default Analytics;
