@@ -21,7 +21,22 @@ const CompletedRates = ({ className, analytics, ...props }: any) => {
       <ActionlessBarChart
         height={100}
         colors={["hsl(var(--primary))"]}
-        chartCategories={["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"]}
+        chartCategories={[
+          "Sat",
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+        ]}
         chartSeries={[{ name: "Tasks", data: analytics?.perday }]}
       />
     </div>
