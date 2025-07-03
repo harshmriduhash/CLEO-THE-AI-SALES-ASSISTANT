@@ -5,7 +5,10 @@ import ActionlessAreaChart from "@/components/charts/actionless-area-chart";
 const CompletedGoals = ({ className, analytics, ...props }: any) => {
   return (
     <div
-      className={cn("shadow border border-border rounded-2xl px-2 pb-2" , className)}
+      className={cn(
+        "shadow border border-border rounded-2xl px-2 pb-2",
+        className
+      )}
       {...props}
     >
       <div className="p-6 pb-2">
@@ -21,7 +24,22 @@ const CompletedGoals = ({ className, analytics, ...props }: any) => {
       <ActionlessAreaChart
         height={130}
         colors={["hsl(var(--primary))"]}
-        chartCategories={["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri","Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"]}
+        chartCategories={[
+          "Sat",
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+        ]}
         chartSeries={[{ name: "Tasks", data: analytics?.total }]}
       />
     </div>
