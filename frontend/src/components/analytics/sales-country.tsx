@@ -26,26 +26,27 @@ const SalesCountry = ({ className, analytics, ...props }: any) => {
 
       <div className="flex flex-col lg:flex-row items-center gap-9">
         <div className="w-full lg:w-[270px] flex flex-col gap-6">
-          {analytics && analytics?.percountry.map((item: any, ind: number) => (
-            <div
-              key={ind}
-              className="w-full lg:w-[270px] group flex items-center justify-between text-sm font-medium text-secondary-foreground hover:text-primary"
-            >
-              <div className="w-[100px] flex items-center">
-                <SingleDot className="w-2 h-2 mr-2" />
-                <span>{item.name}</span>
-              </div>
+          {analytics &&
+            analytics?.percountry.map((item: any, ind: number) => (
+              <div
+                key={ind}
+                className="w-full lg:w-[270px] group flex items-center justify-between text-sm font-medium text-secondary-foreground hover:text-primary"
+              >
+                <div className="w-[100px] flex items-center">
+                  <SingleDot className="w-2 h-2 mr-2" />
+                  <span>{item.name}</span>
+                </div>
 
-              <div className="w-[calc(100%-100px)] flex items-center justify-between">
-                <Progress
-                  value={item.count}
-                  className="w-[calc(100%-40px)] h-2 bg-card [&>div]:bg-icon-muted group-hover:[&>div]:bg-primary"
-                />
+                <div className="w-[calc(100%-100px)] flex items-center justify-between">
+                  <Progress
+                    value={item.count}
+                    className="w-[calc(100%-40px)] h-2 bg-card [&>div]:bg-icon-muted group-hover:[&>div]:bg-primary"
+                  />
 
-                <p className="w-10 text-right">{item.count}%</p>
+                  <p className="w-10 text-right">{item.count}%</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
 
         <div className="w-full h-full vectorMap bg-blue-500/70 p-4 rounded-md relative">
