@@ -38,42 +38,43 @@ const RecentLeads = ({ className, analytics, ...props }: any) => {
         </TableHeader>
 
         <TableBody>
-          {analytics && analytics?.map((item:any,index:number) => (
-            <TableRow
-              key={index}
-              className="text-sm font-medium border-border"
-            >
-              <TableCell className="px-6 py-4">
-                <div className="flex items-center gap-3">
-                  <Avatar className="w-9 h-9">
-                    <AvatarImage alt="@shadcn" />
-                    <AvatarFallback>CN</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <p className="font-semibold">{item.name}</p>
-                    <p className="text-xs mt-1">{item.country}</p>
+          {analytics &&
+            analytics?.map((item: any, index: number) => (
+              <TableRow
+                key={index}
+                className="text-sm font-medium border-border"
+              >
+                <TableCell className="px-6 py-4">
+                  <div className="flex items-center gap-3">
+                    <Avatar className="w-9 h-9">
+                      <AvatarImage alt="@shadcn" />
+                      <AvatarFallback>CN</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold">{item.name}</p>
+                      <p className="text-xs mt-1">{item.country}</p>
+                    </div>
                   </div>
-                </div>
-              </TableCell>
+                </TableCell>
 
-              <TableCell className="px-6 py-4">{item.email}</TableCell>
+                <TableCell className="px-6 py-4">{item.email}</TableCell>
 
-              <TableCell className="px-6 py-4">${item.dealValue}</TableCell>
+                <TableCell className="px-6 py-4">${item.dealValue}</TableCell>
 
-              <TableCell className="px-6 py-4 text-end">
-                <span
-                  className={cn(
-                    "px-1 py-0.5 rounded-sm bg-card text-xs text-icon-active",
-                    item.status === "success"
-                      ? "text-emerald-500"
-                      : item.status === "error" && "text-red-500"
-                  )}
-                >
-                  {item.status}
-                </span>
-              </TableCell>
-            </TableRow>
-          ))}
+                <TableCell className="px-6 py-4 text-end">
+                  <span
+                    className={cn(
+                      "px-1 py-0.5 rounded-sm bg-card text-xs text-icon-active",
+                      item.status === "success"
+                        ? "text-emerald-500"
+                        : item.status === "error" && "text-red-500"
+                    )}
+                  >
+                    {item.status}
+                  </span>
+                </TableCell>
+              </TableRow>
+            ))}
         </TableBody>
       </Table>
     </Card>
